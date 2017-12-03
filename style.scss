@@ -1,0 +1,12 @@
+$colorRed: red;
+$colorBlue: blue;
+
+
+body {
+    background: $colorRed;
+
+    h3 {
+        color: $colorBlue;
+    }
+
+};
