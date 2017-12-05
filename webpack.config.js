@@ -1,15 +1,17 @@
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './app.js',
+    entry: {
+        context: path.resolve(__dirname, "src/app.js")  
+    },
     output: {
+        path: path.resolve(__dirname, './dist'),
         filename: 'build.js'
     },
     watch: true,
     devServer: {
-        // TODO: add dist folder
-        //contentBase: path.join(__dirname, "dist"),
-        contentBase: path.join(__dirname, ""),
+        contentBase: path.join(__dirname, "dist"),
         compress: true,
         port: 9001
     },
@@ -34,5 +36,11 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    // Use the custom html file
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'src/index.html'
+        })
+    ]
 };
