@@ -3,7 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        context: path.resolve(__dirname, "src/app.js")  
+        context: path.resolve(__dirname, "src/index.js")  
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -17,22 +17,22 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.js$/, // include .js files
-                enforce: "pre", // preload the jshint loader
-                exclude: /node_modules/, // exclude any and all files in the node_modules folder
-                loader: "jshint-loader"
-            },
+            // {
+            //     test: /\.js$/, // include .js files
+            //     enforce: "pre", // preload the jshint loader
+            //     exclude: /node_modules/, // exclude any and all files in the node_modules folder
+            //     loader: "jshint-loader"
+            // },
             {
                 test: /\.scss$/,
                 loader: 'style-loader!css-loader!sass-loader'
             },
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 query: {
-                    presets: ['babel-preset-env']
+                    presets: ['babel-preset-env', 'react']
                 }
             }
         ]
