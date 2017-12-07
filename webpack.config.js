@@ -42,5 +42,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         })
+        // new UglifyJsPlugin({
+        //     test: /\.js($|\?)/i
+        // })
     ]
 };
