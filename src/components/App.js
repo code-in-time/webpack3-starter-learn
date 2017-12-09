@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { fetchNotes } from '../actions';
 
 class App extends Component {
 
     constructor() {
         super();
 
+    }
+
+    componentDidMount() {
+        this.props.fetchNotes();
     }
 
     render() {
@@ -24,4 +29,4 @@ function mapStateToProps(state) {
     return { noteData: state.noteData}
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, {fetchNotes})(App);

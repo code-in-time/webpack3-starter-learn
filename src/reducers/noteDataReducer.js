@@ -1,6 +1,16 @@
-export default function(state = {A:1}) {
+import {FETCH_NOTES} from '../actions/'
 
 
-    return state;
 
+
+export default function(state = {A:1}, action) {
+
+    switch (action.type) {
+
+        case FETCH_NOTES:
+            return Object.assign({}, action.payload);
+
+        default:
+        return state;
+    }
 };
