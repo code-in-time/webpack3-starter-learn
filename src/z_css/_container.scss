@@ -1,0 +1,13 @@
+div.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:         space-around;
+
+}
+
+div.container__item {
+    background-color: $colorGrey;
+    min-height: 100px;
+    min-width: 100px;
+}

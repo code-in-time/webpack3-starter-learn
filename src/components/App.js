@@ -19,6 +19,11 @@ class App extends Component {
         return (
             <div style={{textAlign: 'center'}}>
                 <h1>Hello World</h1>
+                <div className="container">
+                    <div class="container__item">1</div>
+                    <div class="container__item">1</div>
+                    <div class="container__item">1</div>
+                </div>
             </div>
         );
     }
