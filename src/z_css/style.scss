@@ -1,15 +1,27 @@
-@import 'colors';
+@import '_colors';
 @import '_container';
+@import '_shadows';
 
 
-
+* {
+    box-sizing: border-box;
+}
 
 
 body {
     background: $colorRed;
+    margin: 0;
+    padding: 0;
 
     h3 {
         color: $colorBlue;
     }
 
+    h1 {
+        text-align: center;
+    }
+
+
+
 };
+

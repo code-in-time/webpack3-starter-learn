@@ -3,7 +3,7 @@ import {FETCH_NOTES} from '../actions/'
 
 
 
-export default function(state = {A:1}, action) {
+export default function(state = {}, action) {
 
     switch (action.type) {
 

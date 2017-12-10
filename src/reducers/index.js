@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-// import PostsReducer from './reducer_posts';
-// import ActiveBlockReducer from './active_block';
 import NoteDataReducer from '../reducers/noteDataReducer';
+import SelectedNotesReducer from './selectedNotesReducer';
 
 const rootReducer = combineReducers({
-    noteData: NoteDataReducer
+    noteData: NoteDataReducer,
+    selectedNotes: SelectedNotesReducer
 });
 
 export default rootReducer;

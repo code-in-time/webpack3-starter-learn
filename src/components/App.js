@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchNotes } from '../actions';
+import Item from './Item';
 
 class App extends Component {
 
@@ -17,12 +18,12 @@ class App extends Component {
         console.log(this.props.noteData);
 
         return (
-            <div style={{textAlign: 'center'}}>
-                <h1>Hello World</h1>
+            <div>
+                <h1>Items in your list</h1>
                 <div className="container">
-                    <div class="container__item">1</div>
-                    <div class="container__item">1</div>
-                    <div class="container__item">1</div>
+                    <Item notes={this.props.noteData}/>
+                    {/* <Item />
+                    <Item /> */}
                 </div>
             </div>
         );

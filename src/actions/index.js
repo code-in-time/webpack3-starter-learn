@@ -1,4 +1,5 @@
 export const FETCH_NOTES = 'FETCH_NOTES';
+export const SELECT_NOTE = 'SELECT_NOTE';
 
 export function fetchNotes() {
 
@@ -17,9 +18,16 @@ export function fetchNotes() {
         12: {id: 12, note: 'this is not12'}
     }
 
-
     return {
         type: FETCH_NOTES,
         payload: data
+    };
+}
+
+export function selectNote(noteID) {
+
+    return {
+        type: SELECT_NOTE,
+        payload: noteID
     };
 }
