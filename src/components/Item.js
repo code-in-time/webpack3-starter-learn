@@ -5,23 +5,32 @@ export default class Item extends Component {
 
     constructor() {
         super();
+    }
 
+    clickButton(id){
+        console.log(id);
+        // TODO dispatch an action so that this:
     }
 
 
     // TODO: FIX
-    // renderNotes(data) {
-    //     const x = [];
-    //     // this.props.notes.map(i => {
-    //     //     return <div>{i}</div>
-    //     // });
+    renderNotes(data) {
+        const x = [];
+        
+        for (let v in data) {
+            let itemData = this.props.notes[v];
+            x.push(
+                <div key={itemData.note}>
+                    ({itemData.id}) {itemData.note}
+                    <button onClick={e => this.clickButton(itemData.id)} className="btn">
+                        {itemData.id}
+                    </button>
+                    <hr />
+                </div>);
+        }
 
-    //     for (let v in data) {
-    //         x.push(<div>{this.props.notes[v].note}</div>);
-    //     }
-
-    //     return x;
-    // }
+        return x;
+    }
 
     render() {
         console.log()
@@ -36,7 +45,7 @@ export default class Item extends Component {
         }
 
         return (
-            <div className="container__item shadow">22
+            <div className="container__item shadow">
                 {this.renderNotes(this.props.notes)}
             </div>
         );
