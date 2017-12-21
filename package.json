@@ -37,6 +37,8 @@
     "react-dom": "^16.2.0",
     "react-loader": "^2.4.2",
     "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
@@ -45,5 +47,8 @@
     "v": "^0.3.0",
     "webpack": "^3.9.1",
     "webpack-dev-server": "^2.9.5"
+  },
+  "dependencies": {
+    "react-composite": "^1.0.0"
   }
 }

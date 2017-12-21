@@ -4,18 +4,18 @@ export const SELECT_NOTE = 'SELECT_NOTE';
 export function fetchNotes() {
 
     const data = {
-        1: {id: 1, note: 'this is not1'},
-        2: {id: 2, note: 'this is not2'},
-        3: {id: 3, note: 'this is not3'},
-        4: {id: 4, note: 'this is not4'},
-        5: {id: 5, note: 'this is not5'},
-        6: {id: 6, note: 'this is not6'},
-        7: {id: 7, note: 'this is not7'},
-        8: {id: 8, note: 'this is not8'},
-        9: {id: 9, note: 'this is not9'},
-        10: {id: 10, note: 'this is not10'},
-        11: {id: 11, note: 'this is not11'},
-        12: {id: 12, note: 'this is not12'}
+        1: {id: 1, note: 'this is note 1'},
+        2: {id: 2, note: 'this is note 2'},
+        3: {id: 3, note: 'this is note 3'},
+        4: {id: 4, note: 'this is note 4'},
+        5: {id: 5, note: 'this is note 5'},
+        6: {id: 6, note: 'this is note 6'},
+        7: {id: 7, note: 'this is note 7'},
+        8: {id: 8, note: 'this is note 8'},
+        9: {id: 9, note: 'this is note 9'},
+        10: {id: 10, note: 'this is note 10'},
+        11: {id: 11, note: 'this is note 11'},
+        12: {id: 12, note: 'this is note 12'}
     }
 
     return {

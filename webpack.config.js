@@ -13,7 +13,8 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, "dist"),
         compress: true,
-        port: 9001
+        port: 9001,
+        historyApiFallback: true
     },
     devtool: 'source-map',
     module: {

@@ -1,4 +1,8 @@
 .btn {
     min-width: 100px;
     line-height: 20px;
+    display: inline-block;
+    background-color: $colorBlue;
+    text-align: center;
+    color: $colorRed;
 }
