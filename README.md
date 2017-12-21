@@ -3,4 +3,12 @@
 https://webpack.js.org
 
 ## Run
-npm run start
+#### LINUX
+- npm run startdev
+- npm run start
+
+### WINDOWS
+- NOTE webpack must be installed glabally first 'npm install webpack -g'
+- npm run startdevWin
+- npm run startWin
+
