@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import { fetchNotes } from '../actions';
+
 import Item from './Item';
-import P1 from './P1';
+// import P1 from './P1';
 import P2 from './P2';
 
 
@@ -25,17 +26,15 @@ class App extends Component {
             <div>
                 <h1>Items in your list</h1>
                 <div className="container">
-                    <Item notes={this.props.noteData}/>
+                    {/* <Item notes={this.props.noteData}/> */}
                     {/* <Item />
                     <Item /> */}
-                    <Switch>
-                        {/* //TODO WHY does http://localhost:9001/a not work? */}
-                        <Route exact path='/' component={P1}/>
-                        <Route path='/:id' component={P2}/>
-                        {/* <Route path='/b' component={P3}/> */}
-                        {/* <Route path='/roster' component={Roster}/>
-                        <Route path='/schedule' component={Schedule}/> */}
-                    </Switch>
+                    <BrowserRouter>
+                        <Switch>
+                            <Route exact path='/' render={() => <Item notes={this.props.noteData}/> } />
+                            <Route path='/:id' component={P2}/>
+                        </Switch>
+                    </BrowserRouter>
                 </div>
 
 
